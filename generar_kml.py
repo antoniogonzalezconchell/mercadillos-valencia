@@ -3,98 +3,152 @@ import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
-# URL API Datos Abiertos Ayuntamiento de Valencia (Mercados extraordinarios)
-API_VALENCIA_URL = "https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/mercats-ambulants-mercados-ambulantes/records?limit=100"
-
-# Mercadillos adicionales / comprobación manual por si no están mapeados en la API
-MERCADILLOS_EXTRA = [
+# Lista completa de mercadillos extraordinarios de Valencia con Monteolivete incluido
+MERCADILLOS = [
+    {
+        "nombre": "Mercadillo de Ruzafa",
+        "dia": "Lunes",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4628,
+        "lon": -0.3725,
+        "calles": "C/ Barón de Cortes, C/ Padre Perera, C/ Dr. Serrano, C/ Carlos Cervera, C/ Clero"
+    },
+    {
+        "nombre": "Mercadillo de Algirós",
+        "dia": "Lunes",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4722,
+        "lon": -0.3514,
+        "calles": "C/ Actor Llorens, C/ Rugat, C/ La Pobla de Farnals, Plaza San Felipe Neri"
+    },
+    {
+        "nombre": "Mercadillo de Jerusalén / Convento",
+        "dia": "Martes",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4645,
+        "lon": -0.3789,
+        "calles": "C/ Convento Jerusalén, C/ Julio Antonio, C/ Ermita, C/ Estrella"
+    },
+    {
+        "nombre": "Mercadillo de Nazaret",
+        "dia": "Martes",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4503,
+        "lon": -0.3341,
+        "calles": "C/ Alta del Mar"
+    },
+    {
+        "nombre": "Mercadillo de Avenida del Cid",
+        "dia": "Miércoles",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4691,
+        "lon": -0.3985,
+        "calles": "C/ José Maestre, C/ Dels Jurats, C/ Miguel Paredes, Plaza del Mercado"
+    },
+    {
+        "nombre": "Mercadillo del Cabañal",
+        "dia": "Jueves",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4688,
+        "lon": -0.3298,
+        "calles": "C/ Escalante, Av. Mediterráneo, Plaza Cruz del Cañamelar, C/ Justo Vilar"
+    },
+    {
+        "nombre": "Mercadillo de Torrefiel",
+        "dia": "Jueves",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4921,
+        "lon": -0.3732,
+        "calles": "C/ Alemany, C/ Monte Carmelo, C/ Santo Domingo Savio, C/ Jacomart"
+    },
+    {
+        "nombre": "Mercadillo de Benimaclet",
+        "dia": "Viernes",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4851,
+        "lon": -0.3582,
+        "calles": "C/ Sant Esperit, C/ Juan Giner, C/ Utiel, C/ Murta, Plaza de Benimaclet"
+    },
+    {
+        "nombre": "Mercadillo de La Malvarrosa",
+        "dia": "Viernes",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4795,
+        "lon": -0.3261,
+        "calles": "C/ Berenguer de Montoliu, C/ Lanzarote"
+    },
     {
         "nombre": "Mercadillo de Monteolivete",
         "dia": "Viernes",
         "horario": "09:00 - 14:00",
         "lat": 39.4589,
         "lon": -0.3621,
-        "calles": "C/ Pedro Aleixandre, C/ Alcalde Reig"
+        "calles": "C/ Pedro Aleixandre, C/ Alcalde Reig, C/ Escultor José Capuz"
+    },
+    {
+        "nombre": "Mercadillo de Benicalap",
+        "dia": "Sábado",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4935,
+        "lon": -0.3881,
+        "calles": "C/ Miguel Servet, C/ Sierra Martés, C/ Mirasol, C/ Lauri Volpi"
+    },
+    {
+        "nombre": "Mercadillo de Jesús-Patraix",
+        "dia": "Sábado",
+        "horario": "09:00 - 14:00",
+        "lat": 39.4582,
+        "lon": -0.3862,
+        "calles": "C/ Beato Nicolás Factor, Plaza Jesús, C/ Conca, C/ Pío XI"
+    },
+    {
+        "nombre": "Rastro de Valencia",
+        "dia": "Domingo",
+        "horario": "08:00 - 14:00",
+        "lat": 39.4715,
+        "lon": -0.3381,
+        "calles": "Zona Beteró / Av. Tarongers - Serrería"
     }
 ]
 
-def obtener_datos_ayuntamiento():
-    try:
-        req = urllib.request.Request(API_VALENCIA_URL, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req) as response:
-            data = json.loads(response.read().decode())
-            return data.get('results', [])
-    except Exception as e:
-        print(f"Error consultando API consistorio: {e}")
-        return []
-
 def generar_kml():
-    registros_api = obtener_datos_ayuntamiento()
-    
     kml = ET.Element('kml', xmlns="http://www.opengis.net/kml/2.2")
     document = ET.SubElement(kml, 'Document')
     
-    ET.SubElement(document, 'name').text = "Mercadillos Valencia (Oficial API)"
+    ET.SubElement(document, 'name').text = "Mercadillos Valencia"
     
-    # Definición de Estilo: Icono de cesta/tienda azul/rojo
+    # Estilo de icono (Cesta de compras de Google Maps)
     style = ET.SubElement(document, 'Style', id="iconoMercadillo")
     icon_style = ET.SubElement(style, 'IconStyle')
     ET.SubElement(icon_style, 'scale').text = "1.2"
     icon = ET.SubElement(icon_style, 'Icon')
-    # Icono oficial de Google Maps para Shopping/Market
     ET.SubElement(icon, 'href').text = "http://maps.google.com/mapfiles/kml/shapes/shopping.png"
 
-    # 1. Procesar registros API oficial
-    for r in registros_api:
-        # Extraer campos de la API
-        nombre = r.get('nombre', r.get('descripcio', 'Mercadillo Ambulante'))
-        geo = r.get('geo_point_2d', {})
-        lat = geo.get('lat')
-        lon = geo.get('lon')
-        calles = r.get('ubicacion', 'Consultar señalización local')
-        dia = r.get('dia_semana', 'Consultar cartelera')
-
-        if lat and lon:
-            pm = ET.SubElement(document, 'Placemark')
-            ET.SubElement(pm, 'name').text = f"🛒 {nombre}"
-            ET.SubElement(pm, 'styleUrl').text = "#iconoMercadillo"
-            
-            desc = (
-                f"<![CDATA["
-                f"<b>Ubicación:</b> {calles}<br/>"
-                f"<b>Día de montaje:</b> {dia}<br/>"
-                f"<b>Horario prohibición aparcar:</b> 06:00 - 15:00 h<br/>"
-                f"<i>Fuente: Open Data Ayto. de Valencia</i>"
-                f"]]>"
-            )
-            ET.SubElement(pm, 'description').text = desc
-            
-            point = ET.SubElement(pm, 'Point')
-            ET.SubElement(point, 'coordinates').text = f"{lon},{lat},0"
-
-    # 2. Procesar adicionales (ej. Monteolivete)
-    for m in MERCADILLOS_EXTRA:
+    for m in MERCADILLOS:
         pm = ET.SubElement(document, 'Placemark')
-        ET.SubElement(pm, 'name').text = f"🛒 {m['nombre']}"
+        ET.SubElement(pm, 'name').text = f"🛒 {m['nombre']} ({m['dia']})"
         ET.SubElement(pm, 'styleUrl').text = "#iconoMercadillo"
+        
         desc = (
             f"<![CDATA["
-            f"<b>Ubicación:</b> {m['calles']}<br/>"
-            f"<b>Día de montaje:</b> Todos los {m['dia']}s<br/>"
-            f"<b>Horario prohibición aparcar:</b> 06:00 - 15:00 h"
+            f"<b>Día habitual:</b> Todos los {m['dia']}s<br/>"
+            f"<b>Horario prohibición aparcar:</b> 06:00 - 15:00 h<br/>"
+            f"<b>Horario venta:</b> {m['horario']}<br/><br/>"
+            f"<b>Calles afectadas:</b><br/>{m['calles']}"
             f"]]>"
         )
         ET.SubElement(pm, 'description').text = desc
+        
         point = ET.SubElement(pm, 'Point')
         ET.SubElement(point, 'coordinates').text = f"{m['lon']},{m['lat']},0"
 
-    # Formatear y guardar XML
+    # Formatear XML de forma limpia
     xml_str = minidom.parseString(ET.tostring(kml, encoding='utf-8')).toprettyxml(indent="  ")
+    
     with open("mercadillos_valencia.kml", "w", encoding="utf-8") as f:
         f.write(xml_str)
 
-    print("✅ KML actualizado con datos oficiales e iconos personalizados.")
+    print("✅ KML generado correctamente.")
 
 if __name__ == "__main__":
     generar_kml()
-   
