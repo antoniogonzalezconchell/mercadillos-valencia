@@ -1,9 +1,6 @@
-import urllib.request
-import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
-# Lista completa de mercadillos extraordinarios de Valencia con Monteolivete incluido
 MERCADILLOS = [
     {
         "nombre": "Mercadillo de Ruzafa",
@@ -114,10 +111,8 @@ MERCADILLOS = [
 def generar_kml():
     kml = ET.Element('kml', xmlns="http://www.opengis.net/kml/2.2")
     document = ET.SubElement(kml, 'Document')
-    
     ET.SubElement(document, 'name').text = "Mercadillos Valencia"
     
-    # Estilo de icono (Cesta de compras de Google Maps)
     style = ET.SubElement(document, 'Style', id="iconoMercadillo")
     icon_style = ET.SubElement(style, 'IconStyle')
     ET.SubElement(icon_style, 'scale').text = "1.2"
@@ -142,13 +137,12 @@ def generar_kml():
         point = ET.SubElement(pm, 'Point')
         ET.SubElement(point, 'coordinates').text = f"{m['lon']},{m['lat']},0"
 
-    # Formatear XML de forma limpia
     xml_str = minidom.parseString(ET.tostring(kml, encoding='utf-8')).toprettyxml(indent="  ")
     
     with open("mercadillos_valencia.kml", "w", encoding="utf-8") as f:
         f.write(xml_str)
 
-    print("✅ KML generado correctamente.")
+    print("KML generado correctamente.")
 
 if __name__ == "__main__":
     generar_kml()
