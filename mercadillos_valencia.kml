@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Mercadillos Valencia - Zonas y Perímetros</name>
+    <name>Mercadillos Valencia - Zonas de Afectación Reales</name>
     <Style id="estiloPerimetro">
       <PolyStyle>
-        <color>550000FF</color>
+        <color>400000FF</color>
       </PolyStyle>
       <LineStyle>
         <color>FF0000FF</color>
-        <width>3</width>
+        <width>2</width>
       </LineStyle>
     </Style>
     <Placemark>
-      <name>Perímetro Mercadillo de Ruzafa</name>
+      <name>Zona afectada: Mercadillo de Ruzafa</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3738,39.4625,0 -0.3725,39.4628,0 -0.3719,39.462,0 -0.3731,39.4617,0 -0.3738,39.4625,0</coordinates>
+            <coordinates>-0.3743,39.4632,0 -0.3712,39.4632,0 -0.3712,39.4613,0 -0.3743,39.4613,0 -0.3743,39.4632,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -30,12 +30,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Algirós</name>
+      <name>Zona afectada: Mercadillo de Algirós</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3526,39.4732,0 -0.3512,39.4735,0 -0.3508,39.4724,0 -0.3522,39.4721,0 -0.3526,39.4732,0</coordinates>
+            <coordinates>-0.3533,39.4741,0 -0.3498,39.4741,0 -0.3498,39.4714,0 -0.3533,39.4714,0 -0.3533,39.4741,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -48,12 +48,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Jerusalén / Convento</name>
+      <name>Zona afectada: Mercadillo de Jerusalén / Convento</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3798,39.4653,0 -0.3786,39.4655,0 -0.3782,39.4645,0 -0.3795,39.4643,0 -0.3798,39.4653,0</coordinates>
+            <coordinates>-0.3805,39.466,0 -0.3775,39.466,0 -0.3775,39.4638,0 -0.3805,39.4638,0 -0.3805,39.466,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -66,12 +66,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Nazaret</name>
+      <name>Zona afectada: Mercadillo de Nazaret</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3352,39.4512,0 -0.334,39.4513,0 -0.334,39.4504,0 -0.3352,39.4503,0 -0.3352,39.4512,0</coordinates>
+            <coordinates>-0.3359,39.4518,0 -0.333,39.4518,0 -0.333,39.4497,0 -0.3359,39.4497,0 -0.3359,39.4518,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -84,12 +84,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Avenida del Cid</name>
+      <name>Zona afectada: Mercadillo de Avenida del Cid</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.4003,39.4689,0 -0.3988,39.4691,0 -0.3985,39.4679,0 -0.4,39.4677,0 -0.4003,39.4689,0</coordinates>
+            <coordinates>-0.4015,39.4698,0 -0.3975,39.4698,0 -0.3975,39.467,0 -0.4015,39.467,0 -0.4015,39.4698,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -102,12 +102,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo del Cabañal</name>
+      <name>Zona afectada: Mercadillo del Cabañal</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3312,39.4701,0 -0.3296,39.4703,0 -0.3292,39.4689,0 -0.3308,39.4687,0 -0.3312,39.4701,0</coordinates>
+            <coordinates>-0.3325,39.4712,0 -0.3285,39.4712,0 -0.3285,39.4678,0 -0.3325,39.4678,0 -0.3325,39.4712,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -120,12 +120,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Torrefiel</name>
+      <name>Zona afectada: Mercadillo de Torrefiel</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3746,39.4934,0 -0.3732,39.4936,0 -0.3728,39.4922,0 -0.3742,39.492,0 -0.3746,39.4934,0</coordinates>
+            <coordinates>-0.3758,39.4945,0 -0.372,39.4945,0 -0.372,39.4912,0 -0.3758,39.4912,0 -0.3758,39.4945,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -138,12 +138,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Benimaclet</name>
+      <name>Zona afectada: Mercadillo de Benimaclet</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3596,39.4864,0 -0.3582,39.4866,0 -0.3578,39.4852,0 -0.3592,39.485,0 -0.3596,39.4864,0</coordinates>
+            <coordinates>-0.3608,39.4875,0 -0.3568,39.4875,0 -0.3568,39.4842,0 -0.3608,39.4842,0 -0.3608,39.4875,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -156,12 +156,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de La Malvarrosa</name>
+      <name>Zona afectada: Mercadillo de La Malvarrosa</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3275,39.4808,0 -0.3261,39.481,0 -0.3258,39.4796,0 -0.3272,39.4794,0 -0.3275,39.4808,0</coordinates>
+            <coordinates>-0.3288,39.4818,0 -0.3248,39.4818,0 -0.3248,39.4788,0 -0.3288,39.4788,0 -0.3288,39.4818,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -174,12 +174,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Monteolivete</name>
+      <name>Zona afectada: Mercadillo de Monteolivete</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3635,39.4589,0 -0.3621,39.4591,0 -0.3617,39.4577,0 -0.3631,39.4575,0 -0.3635,39.4589,0</coordinates>
+            <coordinates>-0.3648,39.4599,0 -0.3608,39.4599,0 -0.3608,39.4568,0 -0.3648,39.4568,0 -0.3648,39.4599,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -192,12 +192,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Benicalap</name>
+      <name>Zona afectada: Mercadillo de Benicalap</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3897,39.4948,0 -0.3881,39.495,0 -0.3878,39.4936,0 -0.3894,39.4934,0 -0.3897,39.4948,0</coordinates>
+            <coordinates>-0.3908,39.4959,0 -0.3868,39.4959,0 -0.3868,39.4925,0 -0.3908,39.4925,0 -0.3908,39.4959,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -210,12 +210,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Mercadillo de Jesús-Patraix</name>
+      <name>Zona afectada: Mercadillo de Jesús-Patraix</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3879,39.458,0 -0.3865,39.4582,0 -0.3861,39.4568,0 -0.3875,39.4566,0 -0.3879,39.458,0</coordinates>
+            <coordinates>-0.3891,39.4591,0 -0.3851,39.4591,0 -0.3851,39.4558,0 -0.3891,39.4558,0 -0.3891,39.4591,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
@@ -228,12 +228,12 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>Perímetro Rastro de Valencia</name>
+      <name>Zona afectada: Rastro de Valencia</name>
       <styleUrl>#estiloPerimetro</styleUrl>
       <Polygon>
         <outerBoundaryIs>
           <LinearRing>
-            <coordinates>-0.3398,39.473,0 -0.338,39.4732,0 -0.3376,39.4714,0 -0.3394,39.4712,0 -0.3398,39.473,0</coordinates>
+            <coordinates>-0.3412,39.4742,0 -0.3362,39.4742,0 -0.3362,39.4702,0 -0.3412,39.4702,0 -0.3412,39.4742,0</coordinates>
           </LinearRing>
         </outerBoundaryIs>
       </Polygon>
