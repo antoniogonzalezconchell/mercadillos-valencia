@@ -1,96 +1,248 @@
 <?xml version="1.0" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>Mercadillos Valencia - Zonas de Afectación</name>
+    <name>Mercadillos Valencia - Zonas y Perímetros</name>
+    <Style id="estiloPerimetro">
+      <PolyStyle>
+        <color>550000FF</color>
+      </PolyStyle>
+      <LineStyle>
+        <color>FF0000FF</color>
+        <width>3</width>
+      </LineStyle>
+    </Style>
+    <Placemark>
+      <name>Perímetro Mercadillo de Ruzafa</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3738,39.4625,0 -0.3725,39.4628,0 -0.3719,39.462,0 -0.3731,39.4617,0 -0.3738,39.4625,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Ruzafa (Lunes)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Luness de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Barón de Cortes, C/ Padre Perera, C/ Dr. Serrano, C/ Carlos Cervera, C/ Clero&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.37232,39.46275,0</coordinates>
+        <coordinates>-0.3731,39.46215,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Algirós</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3526,39.4732,0 -0.3512,39.4735,0 -0.3508,39.4724,0 -0.3522,39.4721,0 -0.3526,39.4732,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Algirós (Lunes)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Luness de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Actor Llorens, C/ Rugat, C/ La Pobla de Farnals, Plaza San Felipe Neri&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.35128,39.47211,0</coordinates>
+        <coordinates>-0.3519,39.4728,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Jerusalén / Convento</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3798,39.4653,0 -0.3786,39.4655,0 -0.3782,39.4645,0 -0.3795,39.4643,0 -0.3798,39.4653,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Jerusalén / Convento (Martes)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Martess de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Convento Jerusalén, C/ Julio Antonio, C/ Ermita, C/ Estrella&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.37875,39.46441,0</coordinates>
+        <coordinates>-0.3792,39.4649,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Nazaret</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3352,39.4512,0 -0.334,39.4513,0 -0.334,39.4504,0 -0.3352,39.4503,0 -0.3352,39.4512,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Nazaret (Martes)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Martess de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Alta del Mar&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.33395,39.45019,0</coordinates>
+        <coordinates>-0.3346,39.4508,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Avenida del Cid</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.4003,39.4689,0 -0.3988,39.4691,0 -0.3985,39.4679,0 -0.4,39.4677,0 -0.4003,39.4689,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Avenida del Cid (Miércoles)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Miércoless de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ José Maestre, C/ Dels Jurats, C/ Miguel Paredes, Plaza del Mercado&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.39832,39.46898,0</coordinates>
+        <coordinates>-0.3995,39.4684,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo del Cabañal</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3312,39.4701,0 -0.3296,39.4703,0 -0.3292,39.4689,0 -0.3308,39.4687,0 -0.3312,39.4701,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo del Cabañal (Jueves)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Juevess de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Escalante, Av. Mediterráneo, Plaza Cruz del Cañamelar, C/ Justo Vilar&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.32961,39.46865,0</coordinates>
+        <coordinates>-0.3304,39.4695,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Torrefiel</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3746,39.4934,0 -0.3732,39.4936,0 -0.3728,39.4922,0 -0.3742,39.492,0 -0.3746,39.4934,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Torrefiel (Jueves)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Juevess de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Alemany, C/ Monte Carmelo, C/ Santo Domingo Savio, C/ Jacomart&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.37301,39.49195,0</coordinates>
+        <coordinates>-0.3739,39.4928,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Benimaclet</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3596,39.4864,0 -0.3582,39.4866,0 -0.3578,39.4852,0 -0.3592,39.485,0 -0.3596,39.4864,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Benimaclet (Viernes)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Vierness de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Sant Esperit, C/ Juan Giner, C/ Utiel, C/ Murta, Plaza de Benimaclet&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.35801,39.48492,0</coordinates>
+        <coordinates>-0.3589,39.4858,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de La Malvarrosa</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3275,39.4808,0 -0.3261,39.481,0 -0.3258,39.4796,0 -0.3272,39.4794,0 -0.3275,39.4808,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de La Malvarrosa (Viernes)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Vierness de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Berenguer de Montoliu, C/ Lanzarote&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.32594,39.47938,0</coordinates>
+        <coordinates>-0.3268,39.4802,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Monteolivete</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3635,39.4589,0 -0.3621,39.4591,0 -0.3617,39.4577,0 -0.3631,39.4575,0 -0.3635,39.4589,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Monteolivete (Viernes)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Vierness de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Pedro Aleixandre, C/ Alcalde Reig, C/ Escultor José Capuz&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.36195,39.45875,0</coordinates>
+        <coordinates>-0.3628,39.4583,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Benicalap</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3897,39.4948,0 -0.3881,39.495,0 -0.3878,39.4936,0 -0.3894,39.4934,0 -0.3897,39.4948,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Benicalap (Sábado)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Sábados de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Miguel Servet, C/ Sierra Martés, C/ Mirasol, C/ Lauri Volpi&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.38791,39.49332,0</coordinates>
+        <coordinates>-0.3889,39.4942,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Mercadillo de Jesús-Patraix</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3879,39.458,0 -0.3865,39.4582,0 -0.3861,39.4568,0 -0.3875,39.4566,0 -0.3879,39.458,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Mercadillo de Jesús-Patraix (Sábado)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Sábados de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;C/ Beato Nicolás Factor, Plaza Jesús, C/ Conca, C/ Pío XI&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.38601,39.45802,0</coordinates>
+        <coordinates>-0.3871,39.4574,0</coordinates>
       </Point>
+    </Placemark>
+    <Placemark>
+      <name>Perímetro Rastro de Valencia</name>
+      <styleUrl>#estiloPerimetro</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-0.3398,39.473,0 -0.338,39.4732,0 -0.3376,39.4714,0 -0.3394,39.4712,0 -0.3398,39.473,0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>🛒 Rastro de Valencia (Domingo)</name>
       <description>&lt;![CDATA[&lt;div style='font-family: Arial, sans-serif; font-size: 13px;'&gt;&lt;b&gt;⚠️ PREVENCIÓN GRÚA / APARCAMIENTO&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Día:&lt;/b&gt; Todos los Domingos de 06:00 a 15:00 h&lt;br/&gt;&lt;b&gt;Horario de venta:&lt;/b&gt; 08:00 - 14:00&lt;br/&gt;&lt;br/&gt;&lt;b&gt;📍 Calles con restricción de estacionamiento:&lt;/b&gt;&lt;br/&gt;&lt;span style='color: #c0392b; background-color: #f9ebe8; padding: 3px; display: block; margin-top: 4px;'&gt;Zona Beteró / Av. Tarongers - Serrería&lt;/span&gt;&lt;/div&gt;]]&gt;</description>
       <Point>
-        <coordinates>-0.33792,39.47135,0</coordinates>
+        <coordinates>-0.3389,39.4722,0</coordinates>
       </Point>
     </Placemark>
   </Document>
