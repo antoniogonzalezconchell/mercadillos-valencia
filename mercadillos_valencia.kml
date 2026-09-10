@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Mercadillos Semanales de Valencia - Avisos de Aparcamiento</name>
+    <description>Ubicaciones oficiales, días de montaje y calles afectadas para evitar multas de grúa.</description>
+    <Style id="iconoMercadillo">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Mercadillo de Ruzafa (Lunes)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Luness&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 14/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Barón de Cortes&lt;br/&gt;• C/ Padre Perera&lt;br/&gt;• C/ Dr. Serrano&lt;br/&gt;• C/ Carlos Cervera&lt;br/&gt;• C/ Clero]]&gt;</description>
+      <Point>
+        <coordinates>-0.3725,39.4628,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Algirós (Lunes)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Luness&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 14/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Actor Llorens&lt;br/&gt;• C/ Rugat&lt;br/&gt;• C/ La Pobla de Farnals&lt;br/&gt;• Plaza San Felipe Neri]]&gt;</description>
+      <Point>
+        <coordinates>-0.3514,39.4722,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Jerusalén / Convento (Martes)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Martess&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 15/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Convento Jerusalén&lt;br/&gt;• C/ Julio Antonio&lt;br/&gt;• C/ Ermita&lt;br/&gt;• C/ Estrella]]&gt;</description>
+      <Point>
+        <coordinates>-0.3789,39.4645,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Nazaret (Martes)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Martess&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 15/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Alta del Mar]]&gt;</description>
+      <Point>
+        <coordinates>-0.3341,39.4503,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Avenida del Cid (Miércoles)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Miércoless&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 16/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ José Maestre&lt;br/&gt;• C/ Dels Jurats&lt;br/&gt;• C/ Miguel Paredes&lt;br/&gt;• Plaza del Mercado]]&gt;</description>
+      <Point>
+        <coordinates>-0.3985,39.4691,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo del Cabañal (Jueves)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Juevess&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 10/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Escalante&lt;br/&gt;• Av. Mediterráneo&lt;br/&gt;• Plaza Cruz del Cañamelar&lt;br/&gt;• C/ Justo Vilar]]&gt;</description>
+      <Point>
+        <coordinates>-0.3298,39.4688,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Torrefiel (Jueves)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Juevess&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 10/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Alemany&lt;br/&gt;• C/ Monte Carmelo&lt;br/&gt;• C/ Santo Domingo Savio&lt;br/&gt;• C/ Jacomart]]&gt;</description>
+      <Point>
+        <coordinates>-0.3732,39.4921,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Benimaclet (Viernes)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Vierness&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 11/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Sant Esperit&lt;br/&gt;• C/ Juan Giner&lt;br/&gt;• C/ Utiel&lt;br/&gt;• C/ Murta&lt;br/&gt;• Plaza de Benimaclet]]&gt;</description>
+      <Point>
+        <coordinates>-0.3582,39.4851,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de La Malvarrosa (Viernes)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Vierness&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 11/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Berenguer de Montoliu&lt;br/&gt;• C/ Lanzarote]]&gt;</description>
+      <Point>
+        <coordinates>-0.3261,39.4795,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Benicalap (Sábado)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Sábados&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 12/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Miguel Servet&lt;br/&gt;• C/ Sierra Martés&lt;br/&gt;• C/ Mirasol&lt;br/&gt;• C/ Lauri Volpi]]&gt;</description>
+      <Point>
+        <coordinates>-0.3881,39.4935,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mercadillo de Jesús-Patraix (Sábado)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Sábados&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 09:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 12/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• C/ Beato Nicolás Factor&lt;br/&gt;• Plaza Jesús&lt;br/&gt;• C/ Conca&lt;br/&gt;• C/ Pío XI]]&gt;</description>
+      <Point>
+        <coordinates>-0.3862,39.4582,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Rastro de Valencia (Domingo)</name>
+      <styleUrl>#iconoMercadillo</styleUrl>
+      <description>&lt;![CDATA[&lt;b&gt;Día habitual:&lt;/b&gt; Todos los Domingos&lt;br/&gt;&lt;b&gt;Horario prohibición aparcar:&lt;/b&gt; 06:00 - 15:00 h&lt;br/&gt;&lt;b&gt;Horario venta:&lt;/b&gt; 08:00 - 14:00&lt;br/&gt;&lt;b&gt;Próxima edición:&lt;/b&gt; 13/09/2026&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Calles afectadas:&lt;/b&gt;&lt;br/&gt;• Zona Beteró / Av. Tarongers - Serrería]]&gt;</description>
+      <Point>
+        <coordinates>-0.3381,39.4715,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
