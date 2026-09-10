@@ -1,178 +1,100 @@
-import datetime
+import urllib.request
+import json
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
-# 1. BASE DE DATOS DE MERCADILLOS EXTRAORDINARIOS DE VALENCIA
-# Incluye ubicación aproximada (lat/lon) y las calles afectadas del perímetro
-MERCADILLOS_VALENCIA = [
+# URL API Datos Abiertos Ayuntamiento de Valencia (Mercados extraordinarios)
+API_VALENCIA_URL = "https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/mercats-ambulants-mercados-ambulantes/records?limit=100"
+
+# Mercadillos adicionales / comprobación manual por si no están mapeados en la API
+MERCADILLOS_EXTRA = [
     {
-        "nombre": "Mercadillo de Ruzafa",
-        "dias_semana": [0],  # 0 = Lunes
+        "nombre": "Mercadillo de Monteolivete",
+        "dia": "Viernes",
         "horario": "09:00 - 14:00",
-        "lat": 39.4628,
-        "lon": -0.3725,
-        "calles": ["C/ Barón de Cortes", "C/ Padre Perera", "C/ Dr. Serrano", "C/ Carlos Cervera", "C/ Clero"]
-    },
-    {
-        "nombre": "Mercadillo de Algirós",
-        "dias_semana": [0],  # Lunes
-        "horario": "09:00 - 14:00",
-        "lat": 39.4722,
-        "lon": -0.3514,
-        "calles": ["C/ Actor Llorens", "C/ Rugat", "C/ La Pobla de Farnals", "Plaza San Felipe Neri"]
-    },
-    {
-        "nombre": "Mercadillo de Jerusalén / Convento",
-        "dias_semana": [1],  # 1 = Martes
-        "horario": "09:00 - 14:00",
-        "lat": 39.4645,
-        "lon": -0.3789,
-        "calles": ["C/ Convento Jerusalén", "C/ Julio Antonio", "C/ Ermita", "C/ Estrella"]
-    },
-    {
-        "nombre": "Mercadillo de Nazaret",
-        "dias_semana": [1],  # Martes
-        "horario": "09:00 - 14:00",
-        "lat": 39.4503,
-        "lon": -0.3341,
-        "calles": ["C/ Alta del Mar"]
-    },
-    {
-        "nombre": "Mercadillo de Avenida del Cid",
-        "dias_semana": [2],  # 2 = Miércoles
-        "horario": "09:00 - 14:00",
-        "lat": 39.4691,
-        "lon": -0.3985,
-        "calles": ["C/ José Maestre", "C/ Dels Jurats", "C/ Miguel Paredes", "Plaza del Mercado"]
-    },
-    {
-        "nombre": "Mercadillo del Cabañal",
-        "dias_semana": [3],  # 3 = Jueves
-        "horario": "09:00 - 14:00",
-        "lat": 39.4688,
-        "lon": -0.3298,
-        "calles": ["C/ Escalante", "Av. Mediterráneo", "Plaza Cruz del Cañamelar", "C/ Justo Vilar"]
-    },
-    {
-        "nombre": "Mercadillo de Torrefiel",
-        "dias_semana": [3],  # Jueves
-        "horario": "09:00 - 14:00",
-        "lat": 39.4921,
-        "lon": -0.3732,
-        "calles": ["C/ Alemany", "C/ Monte Carmelo", "C/ Santo Domingo Savio", "C/ Jacomart"]
-    },
-    {
-        "nombre": "Mercadillo de Benimaclet",
-        "dias_semana": [4],  # 4 = Viernes
-        "horario": "09:00 - 14:00",
-        "lat": 39.4851,
-        "lon": -0.3582,
-        "calles": ["C/ Sant Esperit", "C/ Juan Giner", "C/ Utiel", "C/ Murta", "Plaza de Benimaclet"]
-    },
-    {
-        "nombre": "Mercadillo de La Malvarrosa",
-        "dias_semana": [4],  # Viernes
-        "horario": "09:00 - 14:00",
-        "lat": 39.4795,
-        "lon": -0.3261,
-        "calles": ["C/ Berenguer de Montoliu", "C/ Lanzarote"]
-    },
-    {
-        "nombre": "Mercadillo de Benicalap",
-        "dias_semana": [5],  # 5 = Sábado
-        "horario": "09:00 - 14:00",
-        "lat": 39.4935,
-        "lon": -0.3881,
-        "calles": ["C/ Miguel Servet", "C/ Sierra Martés", "C/ Mirasol", "C/ Lauri Volpi"]
-    },
-    {
-        "nombre": "Mercadillo de Jesús-Patraix",
-        "dias_semana": [5],  # Sábado
-        "horario": "09:00 - 14:00",
-        "lat": 39.4582,
-        "lon": -0.3862,
-        "calles": ["C/ Beato Nicolás Factor", "Plaza Jesús", "C/ Conca", "C/ Pío XI"]
-    },
-    {
-        "nombre": "Rastro de Valencia",
-        "dias_semana": [6],  # 6 = Domingo
-        "horario": "08:00 - 14:00",
-        "lat": 39.4715,
-        "lon": -0.3381,
-        "calles": ["Zona Beteró / Av. Tarongers - Serrería"]
+        "lat": 39.4589,
+        "lon": -0.3621,
+        "calles": "C/ Pedro Aleixandre, C/ Alcalde Reig"
     }
 ]
 
-NOMBRES_DIAS = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+def obtener_datos_ayuntamiento():
+    try:
+        req = urllib.request.Request(API_VALENCIA_URL, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req) as response:
+            data = json.loads(response.read().decode())
+            return data.get('results', [])
+    except Exception as e:
+        print(f"Error consultando API consistorio: {e}")
+        return []
 
-# 2. GESTIÓN DE FECHAS Y DÍAS PRÓXIMOS
-def obtener_proxima_fecha(dia_semana_target):
-    """Calcula la fecha exacta del próximo día de la semana indicado."""
-    hoy = datetime.date.today()
-    dias_hasta_evento = (dia_semana_target - hoy.weekday()) % 7
-    if dias_hasta_evento == 0:
-        dias_hasta_evento = 0  # Es hoy
-    return hoy + datetime.timedelta(days=dias_hasta_evento)
-
-# 3. GENERACIÓN DEL ARCHIVO KML
-def generar_kml_mercadillos(lista_mercadillos, archivo_salida="mercadillos_valencia.kml"):
-    """Crea un documento KML estructurado para Google Maps."""
+def generar_kml():
+    registros_api = obtener_datos_ayuntamiento()
+    
     kml = ET.Element('kml', xmlns="http://www.opengis.net/kml/2.2")
     document = ET.SubElement(kml, 'Document')
     
-    # Nombre del mapa en Google Maps
-    nombre_mapa = ET.SubElement(document, 'name')
-    nombre_mapa.text = "Mercadillos Semanales de Valencia - Avisos de Aparcamiento"
+    ET.SubElement(document, 'name').text = "Mercadillos Valencia (Oficial API)"
     
-    descripcion_mapa = ET.SubElement(document, 'description')
-    descripcion_mapa.text = "Ubicaciones oficiales, días de montaje y calles afectadas para evitar multas de grúa."
-
-    # Definir estilos de icono (Pin Rojo)
+    # Definición de Estilo: Icono de cesta/tienda azul/rojo
     style = ET.SubElement(document, 'Style', id="iconoMercadillo")
     icon_style = ET.SubElement(style, 'IconStyle')
-    scale = ET.SubElement(icon_style, 'scale')
-    scale.text = "1.1"
+    ET.SubElement(icon_style, 'scale').text = "1.2"
     icon = ET.SubElement(icon_style, 'Icon')
-    href = ET.SubElement(icon, 'href')
-    href.text = "http://maps.google.com/mapfiles/kml/paddle/red-circle.png"
+    # Icono oficial de Google Maps para Shopping/Market
+    ET.SubElement(icon, 'href').text = "http://maps.google.com/mapfiles/kml/shapes/shopping.png"
 
-    # Insertar los marcadores
-    for mercadillo in lista_mercadillos:
-        proximo_dia = obtener_proxima_fecha(mercadillo["dias_semana"][0])
-        nombre_dia = NOMBRES_DIAS[mercadillo["dias_semana"][0]]
-        calles_str = "<br/>• ".join(mercadillo["calles"])
-        
+    # 1. Procesar registros API oficial
+    for r in registros_api:
+        # Extraer campos de la API
+        nombre = r.get('nombre', r.get('descripcio', 'Mercadillo Ambulante'))
+        geo = r.get('geo_point_2d', {})
+        lat = geo.get('lat')
+        lon = geo.get('lon')
+        calles = r.get('ubicacion', 'Consultar señalización local')
+        dia = r.get('dia_semana', 'Consultar cartelera')
+
+        if lat and lon:
+            pm = ET.SubElement(document, 'Placemark')
+            ET.SubElement(pm, 'name').text = f"🛒 {nombre}"
+            ET.SubElement(pm, 'styleUrl').text = "#iconoMercadillo"
+            
+            desc = (
+                f"<![CDATA["
+                f"<b>Ubicación:</b> {calles}<br/>"
+                f"<b>Día de montaje:</b> {dia}<br/>"
+                f"<b>Horario prohibición aparcar:</b> 06:00 - 15:00 h<br/>"
+                f"<i>Fuente: Open Data Ayto. de Valencia</i>"
+                f"]]>"
+            )
+            ET.SubElement(pm, 'description').text = desc
+            
+            point = ET.SubElement(pm, 'Point')
+            ET.SubElement(point, 'coordinates').text = f"{lon},{lat},0"
+
+    # 2. Procesar adicionales (ej. Monteolivete)
+    for m in MERCADILLOS_EXTRA:
         pm = ET.SubElement(document, 'Placemark')
-        
-        name = ET.SubElement(pm, 'name')
-        name.text = f"{mercadillo['nombre']} ({nombre_dia})"
-        
-        style_url = ET.SubElement(pm, 'styleUrl')
-        style_url.text = "#iconoMercadillo"
-        
-        description = ET.SubElement(pm, 'description')
-        description.text = (
+        ET.SubElement(pm, 'name').text = f"🛒 {m['nombre']}"
+        ET.SubElement(pm, 'styleUrl').text = "#iconoMercadillo"
+        desc = (
             f"<![CDATA["
-            f"<b>Día habitual:</b> Todos los {nombre_dia}s<br/>"
-            f"<b>Horario prohibición aparcar:</b> 06:00 - 15:00 h<br/>"
-            f"<b>Horario venta:</b> {mercadillo['horario']}<br/>"
-            f"<b>Próxima edición:</b> {proximo_dia.strftime('%d/%m/%Y')}<br/><br/>"
-            f"<b>Calles afectadas:</b><br/>• {calles_str}"
+            f"<b>Ubicación:</b> {m['calles']}<br/>"
+            f"<b>Día de montaje:</b> Todos los {m['dia']}s<br/>"
+            f"<b>Horario prohibición aparcar:</b> 06:00 - 15:00 h"
             f"]]>"
         )
-        
+        ET.SubElement(pm, 'description').text = desc
         point = ET.SubElement(pm, 'Point')
-        coordinates = ET.SubElement(point, 'coordinates')
-        # Formato KML: Longitud, Latitud, Altitud
-        coordinates.text = f"{mercadillo['lon']},{mercadillo['lat']},0"
+        ET.SubElement(point, 'coordinates').text = f"{m['lon']},{m['lat']},0"
 
-    # Formatear XML de forma limpia
+    # Formatear y guardar XML
     xml_str = minidom.parseString(ET.tostring(kml, encoding='utf-8')).toprettyxml(indent="  ")
-    
-    with open(archivo_salida, "w", encoding="utf-8") as f:
+    with open("mercadillos_valencia.kml", "w", encoding="utf-8") as f:
         f.write(xml_str)
-        
-    print(f"✅ Archivo KML generado con éxito: '{archivo_salida}'")
+
+    print("✅ KML actualizado con datos oficiales e iconos personalizados.")
 
 if __name__ == "__main__":
-    generar_kml_mercadillos(MERCADILLOS_VALENCIA)
+    generar_kml()
+   
